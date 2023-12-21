@@ -28,7 +28,10 @@ function doGet(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutpu
  */
 function renderHtmlResponse(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutput {
   const template = HtmlService.createTemplateFromFile('html/app');
+  
   template.route = e.parameter?.route || 'home';
   template.doGetEventObj = e;
+  template.appHtmlCode = template.getCodeWithComments();
+  
   return template.evaluate()
 }

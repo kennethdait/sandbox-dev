@@ -6,8 +6,17 @@
 <body>
 
   <div id="app-wrapper" class="container">
+    
     <h1 id="route"><?= route; ?></h1>
-    <pre><?= JSON.stringify(doGetEventObj, null, 2); ?></pre>
+    
+    <p><code><?= JSON.stringify(doGetEventObj); ?></code></p>
+    
+    <h2>Class: <code>HtmlTemplate</code></h2>
+    <p>In this project, html/app.html is being called as a template.</p>
+    <p>So on this HtmlTemplate object, I call the "<a href="https://developers.google.com/apps-script/reference/html/html-template.html#getCodeWithComments()">getCodeWithComments()</a>" method:</p>
+    <blockquote>This method applied to an HTML project file generates a string of JavaScript code that can be evaluated (<code>HtmlTemplate.eval()</code>), with each line of the code containing the original line from the template as a comment.</blockquote>
+    <pre><?= appHtmlCode; ?></pre>
+
   </div>
 
   <script>
