@@ -1,0 +1,30 @@
+{
+  "name": "sandbox-dev",
+  "version": "1.0.0",
+  "description": "a webapp sandbox",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kennethdait/sandbox-dev.git"
+  },
+  "keywords": [
+    "clasp",
+    "google",
+    "apps",
+    "script",
+    "node",
+    "typescript"
+  ],
+  "author": "Ken Dait",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/kennethdait/sandbox-dev/issues"
+  },
+  "homepage": "https://github.com/kennethdait/sandbox-dev#readme",
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.78"
+  }
+}
