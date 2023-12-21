@@ -1,6 +1,6 @@
 {
   "name": "sandbox-dev",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "a webapp sandbox",
   "main": "src/index.js",
   "scripts": {
