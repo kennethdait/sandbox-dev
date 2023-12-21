@@ -5,7 +5,9 @@
  */
 
 function greet(person: string): string {
-	console.log(`Hello, ${person}!`);
+  const msg = `Hello, ${person}!`;
+	console.log(msg);
+  return msg;
 }
 
 /**
@@ -13,7 +15,7 @@ function greet(person: string): string {
  * 
  * @returns {GoogleAppsScript.HTML.HtmlOutput}
  */
-function doGet(e) {
+function doGet(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutput {
   e = e || {};
   const template = HtmlService.createTemplate('<h1>Hello world!</h1><pre><?= data ?></pre>');
   template.data = JSON.stringify(e);
