@@ -9,7 +9,7 @@
 /**
  * handle HTTP GET requests
  * 
- * @param GoogleAppsScript.Events.DoGet simple trigger
+ * @param {GoogleAppsScript.Events.DoGet} e - event obj passed by the super calling this.doGet
  * @returns {GoogleAppsScript.HTML.HtmlOutput} html page to be returned to requesting web client
  */
 function doGet(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutput {
@@ -23,13 +23,13 @@ function doGet(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutpu
 /**
  * route specific HTML content back to doGet()
  * 
- * @param GoogleAppsScript.Events.DoGet 
+ * @param {GoogleAppsScript.Events.DoGet} e - the event obj that could optionally contain a specified "route"
  * @returns {GoogleAppsScript.HTML.HtmlOutput} specified by `route` parameter passed into the GET request
  */
 function renderHtmlResponse(e:GoogleAppsScript.Events.DoGet): GoogleAppsScript.HTML.HtmlOutput {
   const template = HtmlService.createTemplateFromFile('html/app');
   
-  template.route = e.parameter?.route || 'home';
+  // configure the scriptlet parameters  template.route = e.parameter?.route || 'home';
   template.doGetEventObj = e;
   template.appHtmlCode = template.getCodeWithComments();
   
